@@ -49,7 +49,6 @@ for (i in 1:10) {
   
   p <- p + coord_cartesian(ylim = c(-3, 3))
   
-
   filename <- paste0("random_walk_variant_", i, ".png")
   ggsave(filename, plot = p, width = 8, height = 6, dpi = 300)
 }
