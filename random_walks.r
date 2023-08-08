@@ -34,13 +34,11 @@ for (i in 1:10) {
   min_length <- min(sapply(result_list, length))
   result_list <- lapply(result_list, function(x) x[1:min_length])
   
-
   data_df <- data.frame(step = rep(1:min_length, num_walks),
                         value = unlist(result_list),
                         walk_num = factor(rep(1:num_walks, each = min_length)),
                         variant = factor(rep(i, num_walks * min_length)))
   
-
   p <- ggplot(data_df, aes(x = step, y = value, group = walk_num, color = walk_num)) +
     geom_line(alpha = 0.5) +
     theme_minimal() +
