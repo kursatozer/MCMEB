@@ -47,7 +47,6 @@ for (i in 1:10) {
     theme(plot.title = element_text(hjust = 0.5),
           plot.subtitle = element_text(hjust = 0.5))
   
-
   p <- p + coord_cartesian(ylim = c(-3, 3))
   
 
